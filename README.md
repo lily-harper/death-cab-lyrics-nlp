@@ -1,8 +1,8 @@
 # Soul Meets Body (meets NLP)
 
-## Learning NLP 
+## Motivation 
 
-Inspired by the fact that Spotify told me I listened to 12 hours of Death Cab in one week
+This project started after Spotify told me I had listened to **12 hours of Death Cab for Cutie** in one week, which felt like a good excuse to explore their lyrics while learning NLP. 
 
 ## Project overview (tl;dr)
 
@@ -13,17 +13,18 @@ Data was pulled using the Genius API.
 Lyrics written by Benjamin Gibbard. 
 Data was cleaned, preprocessed and analzyed by me. 
 
-### Questions 
+### Questions (?)
 
 * How does Ben Gibbard write differently for Death Cab and the Postal Service? 
 * How does Death Cab for Cuties lexicon develop or shift through time? 
 * Can we take a song and predict if it was written for Death Cab or the Postal Service?
 
-### Results!
+### Results (!)
 
-<details>
-<summary> ### Pipeline </summary>
+placehold
 
+### Pipeline 
+```
 Genius API
    ↓
 Raw Lyrics CSV
@@ -35,10 +36,11 @@ Processed Dataset
 NLP Analysis
    ↓
 Visualizations
-</details>
+```
 
 ## Repository Structure
 
+```
 project/
 │
 ├── data
@@ -53,20 +55,28 @@ project/
 ├── analysis.ipynb
 ├── requirements.txt
 └── README.md
+```
 
 ### Reproducibility 
 
 Please run this if you want
 
 Clone this repository: 
+
 git clone https://github.com/lily-harper/death-cab-lyrics-nlp 
 
 Create environment: 
+```bash
 pip install -r requirements.txt
+```
 
-
-"""
+```python
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-"""
+```
+
+```markdown
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![Pandas](https://img.shields.io/badge/pandas-data%20cleaning-green)
+```
