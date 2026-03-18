@@ -75,8 +75,3 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
-
-```markdown
-![Python](https://img.shields.io/badge/python-3.11-blue)
-![Pandas](https://img.shields.io/badge/pandas-data%20cleaning-green)
-```
