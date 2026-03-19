@@ -3,7 +3,7 @@
 ```
 "Out in this Binary Sea 
 Zeros and ones patterns appear
-- Death Cab for Cutie, *Binary Sea* 
+- Death Cab for Cutie, Binary Sea
 ```
 
 ## Motivation 
@@ -79,6 +79,7 @@ git clone https://github.com/lily-harper/death-cab-lyrics-nlp
 ```
 
 Create environment: 
+
 ```bash
 pip install -r requirements.txt
 ```
