@@ -2,8 +2,23 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import classification_report
+from sklearn.decomposition import PCA
 
 import pandas as pd 
+
+def decomp(df, vec):
+    X = vec.transform(df["lyrics_clean"]) 
+    X_dense = X.toarray()
+
+    pca = PCA(n_components=2)
+    X_2d = pca.fit_transform(X_dense)
+
+    df_out = df.copy()
+
+    df_out["x"] = X_2d[:, 0]
+    df_out["y"] = X_2d[:,1]
+
+    return df_out
 
 def vectorize(text_col, index = None):
     """Take song column and make it into the numeric feature matrix

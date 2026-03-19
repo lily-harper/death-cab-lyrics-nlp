@@ -1,0 +1,226 @@
+,Unnamed: 0,band_name,album,song_name,song_lower,x,y,sentiment
+0,15,Death Cab for Cutie,An Arrow in the Wall,An Arrow in the Wall,an arrow in the wall,-0.030069317407367405,-0.04293230725557881,-0.9889
+1,68,Death Cab for Cutie,Asphalt Meadows,Foxglove Through the Clearcut,foxglove through the clearcut,-0.0324829066941971,-0.04764415067965327,-0.8462
+2,246,Death Cab for Cutie,Asphalt Meadows,Wheat Like Waves,wheat like waves,0.03252568672045826,-0.04459282436605675,0.3809
+3,163,Death Cab for Cutie,Asphalt Meadows,Roman Candles,roman candles,-0.01553202631312447,-0.051291605006351285,0.9001
+4,70,Death Cab for Cutie,Asphalt Meadows,Fragments From the Decade,fragments from the decade,-0.024955055318295654,0.021764293224214897,-0.9364
+5,159,Death Cab for Cutie,Asphalt Meadows,Rand McNally,rand mcnally,-0.05201985875691022,-0.010871039149930766,0.3612
+6,19,Death Cab for Cutie,Asphalt Meadows,Asphalt Meadows,asphalt meadows,-0.016394497347120646,-0.048511573072849035,-0.968
+7,92,Death Cab for Cutie,Asphalt Meadows,I Miss Strangers,i miss strangers,-0.041883544351034904,-0.0547918663071884,-0.9506
+8,86,Death Cab for Cutie,Asphalt Meadows,I Don’t Know How I Survive,i don’t know how i survive,-0.023730490970950483,0.409275375143251,-0.5994
+9,144,Death Cab for Cutie,Asphalt Meadows,Pepper,pepper,0.12640053254551326,-0.06206866032268505,0.989
+10,90,Death Cab for Cutie,Asphalt Meadows,I’ll Never Give Up on You,i’ll never give up on you,-0.06032862797390141,-0.009351914243265138,-0.6428
+11,80,Death Cab for Cutie,Asphalt Meadows,Here to Forever,here to forever,0.06236434024979496,0.013552540529996488,0.9102
+12,210,Death Cab for Cutie,Asphalt Meadows (Acoustic),The Plan,the plan,-0.03228840587077258,-0.043586413591704024,0.0
+13,357,Benjamin Gibbard,Bandwagonesque,Star Sign,star sign,-0.05306529414573736,0.023033423017829728,-0.1431
+14,330,Benjamin Gibbard,Bandwagonesque,Guiding Star,guiding star,-0.029920948663965573,0.13681102134887294,0.7096
+15,306,Benjamin Gibbard,Bandwagonesque,Alcoholiday,alcoholiday,-0.008187347545470123,0.5661625878803872,-0.9786
+16,360,Benjamin Gibbard,Bandwagonesque,The Concept,the concept,-0.05510264022224062,0.00983345653507575,0.9945
+17,355,Benjamin Gibbard,Bandwagonesque,Sidewinder,sidewinder,0.4973370953112846,-0.008422142542223374,0.9964
+18,332,Benjamin Gibbard,Bandwagonesque,I Don’t Know,i don’t know,0.03700402903537452,0.7911282691689928,-0.6007
+19,345,Benjamin Gibbard,Bandwagonesque,Metal Baby,metal baby,-0.03769856574243471,-0.0010888668950721078,-0.0854
+20,365,Benjamin Gibbard,Bandwagonesque,What You Do To Me,what you do to me,-0.02189300606352595,0.24138688072040804,0.0
+21,319,Benjamin Gibbard,Bandwagonesque,December,december,0.17467594113933776,0.08143362783533614,0.4628
+22,348,Benjamin Gibbard,Bandwagonesque,Pet Rock,pet rock,-0.0743623951293808,0.03403111494270057,0.1901
+23,231,Death Cab for Cutie,Codes and Keys,Unobstructed Views,unobstructed views,0.6342550780657855,-0.07764005283617269,0.9944
+24,228,Death Cab for Cutie,Codes and Keys,Underneath the Sycamore,underneath the sycamore,-0.07503918596507364,-0.029497867557211302,0.9803
+25,253,Death Cab for Cutie,Codes and Keys,You Are a Tourist,you are a tourist,-0.012282837387202991,-0.05246429601657585,-0.9309
+26,153,Death Cab for Cutie,Codes and Keys,Portable Television,portable television,-0.11157928841965667,-0.15399956125807507,-0.6203
+27,167,Death Cab for Cutie,Codes and Keys,Some Boys,some boys,0.12966495339419007,0.25061378973165427,0.9497
+28,188,Death Cab for Cutie,Codes and Keys,St. Peter’s Cathedral,st. peter’s cathedral,-0.02879147750726398,-0.02479113750377272,-0.6263
+29,185,Death Cab for Cutie,Codes and Keys,"Stay Young, Go Dancing","stay young, go dancing",-0.04464844541127977,-0.08913176849123547,0.9509
+30,130,Death Cab for Cutie,Codes and Keys,Monday Morning,monday morning,-0.01993861217410112,-0.08374704039997907,0.9632
+31,52,Death Cab for Cutie,Codes and Keys,Doors Unlocked and Open,doors unlocked and open,-0.042097369333831215,-0.06831159893728299,0.9432
+32,84,Death Cab for Cutie,Codes and Keys,Home Is a Fire,home is a fire,0.0959063975748897,-0.09201109272382169,0.9642
+33,37,Death Cab for Cutie,Codes and Keys,Codes and Keys,codes and keys,0.01259903286879489,-0.09159915204490436,0.9491
+34,341,Benjamin Gibbard,Former Lives,Lily,lily,0.24419661042128207,0.0987075767990395,0.9771
+35,313,Benjamin Gibbard,Former Lives,Broken Yolk in Western Sky,broken yolk in western sky,0.03819217307172212,0.07247444398597522,-0.862
+36,324,Benjamin Gibbard,Former Lives,"Duncan, Where Have You Gone?","duncan, where have you gone?",0.03364206518460741,0.020393895571150886,0.9388
+37,320,Benjamin Gibbard,Former Lives,Dream Song,dream song,-0.08014490401329867,-0.03830809106201129,-0.6808
+38,304,Benjamin Gibbard,Former Lives,A Hard One to Know,a hard one to know,0.049041302990059495,0.18226047513183233,0.2439
+39,312,Benjamin Gibbard,Former Lives,Bigger Than Love,bigger than love,0.14609873493346726,-0.11077021882682479,0.9976
+40,339,Benjamin Gibbard,Former Lives,Lady Adelaide,lady adelaide,-0.05142971910835839,-0.0486071362825353,-0.9167
+41,346,Benjamin Gibbard,Former Lives,"Oh, Woe","oh, woe",-0.04884123917497637,-0.03859161201833437,-0.9844
+42,354,Benjamin Gibbard,Former Lives,Shepherd’s Bush Lullaby,shepherd’s bush lullaby,0.09731961508858802,0.006718176162098145,0.9184
+43,356,Benjamin Gibbard,Former Lives,Something’s Rattling (Cowpoke),something’s rattling (cowpoke),-0.029188393427024364,-0.06530308647059553,0.9635
+44,359,Benjamin Gibbard,Former Lives,Teardrop Windows,teardrop windows,-0.04261644134782494,-0.006382282717502233,-0.6974
+45,333,Benjamin Gibbard,Former Lives,I’m Building a Fire,i’m building a fire,-0.01968271534637161,-0.01302085344575293,0.2732
+46,214,Death Cab for Cutie,Future Soundtrack For America,This Temporary Life,this temporary life,-0.044560131464496555,-0.0978624185373337,-0.2996
+47,283,The Postal Service,Give Up (10th Anniversary Edition),Sleeping In,sleeping in,-0.04833580962385786,0.12164113629448345,0.2632
+48,289,The Postal Service,Give Up (10th Anniversary Edition),The District Sleeps Alone Tonight,the district sleeps alone tonight,-0.048182068118493404,-0.04666548976051638,0.4588
+49,292,The Postal Service,Give Up (10th Anniversary Edition),There’s Never Enough Time,there’s never enough time,-0.04463018548810835,-0.06754207154334366,0.0
+50,280,The Postal Service,Give Up (10th Anniversary Edition),Recycled Air,recycled air,-0.05690050731467128,-0.05918374456280416,0.8699
+51,300,The Postal Service,Give Up (10th Anniversary Edition),We Will Become Silhouettes,we will become silhouettes,-0.04854798365550046,-0.02183570610244399,-0.5562
+52,298,The Postal Service,Give Up (10th Anniversary Edition),Turn Around,turn around,-0.0808911795588942,0.039199316170642096,0.0083
+53,296,The Postal Service,Give Up (10th Anniversary Edition),This Place Is a Prison,this place is a prison,-0.03308792131847564,0.036496792575871156,0.85
+54,273,The Postal Service,Give Up (10th Anniversary Edition),Grow Old with Me,grow old with me,0.30330228328272707,-0.0981820905767401,0.9977
+55,285,The Postal Service,Give Up (10th Anniversary Edition),Such Great Heights,such great heights,-0.052386341812912886,-0.04854601160914934,0.9948
+56,269,The Postal Service,Give Up (10th Anniversary Edition),Brand New Colony,brand new colony,-0.06673607287819766,-0.022593982704724413,0.9303
+57,274,The Postal Service,Give Up (10th Anniversary Edition),Natural Anthem,natural anthem,-0.0698004978029407,-0.00932749315244455,0.7338
+58,276,The Postal Service,Give Up (10th Anniversary Edition),Nothing Better,nothing better,0.01666556941421626,0.01534825307346606,0.9093
+59,271,The Postal Service,Give Up (10th Anniversary Edition),Clark Gable,clark gable,0.16769046214864808,0.07493115550797899,0.9915
+60,263,The Postal Service,Give Up (10th Anniversary Edition),Against All Odds (Take a Look at Me Now),against all odds (take a look at me now),-0.0013732855889217767,-0.03525843886986384,0.3591
+61,266,The Postal Service,Give Up (10th Anniversary Edition),Be Still My Heart,be still my heart,-0.07652797959445123,-0.03478415437137862,0.906
+62,288,The Postal Service,Give Up (10th Anniversary Edition),Suddenly Everything Has Changed,suddenly everything has changed,-0.05585043446683396,0.009996263009941718,-0.2732
+63,264,The Postal Service,Give Up (10th Anniversary Edition),A Tattered Line of String,a tattered line of string,-0.052992987148355715,0.11880659198011259,0.6705
+64,368,Benjamin Gibbard,"Home, Vol 5 EP",You Remind Me Of Home,you remind me of home,-0.06325815791757348,-0.07075585802758959,-0.9895
+65,314,Benjamin Gibbard,"Home, Vol 5 EP",Carolina,carolina,0.0015566831068368613,-0.007971469341951197,0.8392
+66,315,Benjamin Gibbard,"Home, Vol 5 EP",Choir Vandals,choir vandals,-0.03557349779491104,0.06342056983969735,-0.8979
+67,326,Benjamin Gibbard,"Home, Vol 5 EP",Farmer Chords,farmer chords,-0.009661234756813158,0.15617424198292065,-0.8555
+68,72,Death Cab for Cutie,I Built You a Tower,Full of Stars,full of stars,0.008086934752491507,-0.04998677474593776,-0.9904
+69,161,Death Cab for Cutie,I Built You a Tower,Riptides,riptides,0.010006313485175744,-0.05022534980813266,-0.9887
+70,97,Death Cab for Cutie,Kintsugi,Ingénue,ingénue,-0.027490433374961668,-0.032040033308879466,0.7693
+71,204,Death Cab for Cutie,Kintsugi,The Ghosts of Beverly Drive,the ghosts of beverly drive,-0.0066518925736957675,0.6118835623435821,0.7627
+72,262,Death Cab for Cutie,Kintsugi,You’ve Haunted Me All My Life,you’ve haunted me all my life,-0.04930135636593636,-0.0486991435832666,-0.9865
+73,136,Death Cab for Cutie,Kintsugi,No Room in Frame,no room in frame,0.017585026795481174,0.016052105250118593,0.5894
+74,56,Death Cab for Cutie,Kintsugi,El Dorado,el dorado,-0.061657313733451215,-0.08615875208117207,0.5047
+75,83,Death Cab for Cutie,Kintsugi,Hold No Guns,hold no guns,0.12498511168005444,-0.03788593866219839,-0.9727
+76,58,Death Cab for Cutie,Kintsugi,Everything’s a Ceiling,everything’s a ceiling,0.0004977861195232192,-0.01072146140667814,0.8918
+77,30,Death Cab for Cutie,Kintsugi,Black Sun,black sun,-0.050708906173080256,-0.07240727200702184,-0.9112
+78,74,Death Cab for Cutie,Kintsugi,Good Help (Is So Hard to Find),good help (is so hard to find),0.011626422311705202,0.042723813221904175,-0.9941
+79,25,Death Cab for Cutie,Kintsugi,Binary Sea,binary sea,0.005783478912986672,-0.09075846701518875,0.7289
+80,121,Death Cab for Cutie,Kintsugi,Little Wanderer,little wanderer,-0.05587185252775241,-0.038817831988778265,0.9815
+81,336,Benjamin Gibbard,Laggies (Original Motion Picture Soundtrack),It’s Never Too Late,it’s never too late,-0.04117954080198978,0.16023863451778625,-0.9802
+82,36,Death Cab for Cutie,Maybe This Christmas Tree,Christmas (Baby Please Come Home),christmas (baby please come home),-0.03927239410225974,-0.01455035821241292,0.9815
+83,152,Death Cab for Cutie,Narrow Stairs ,Pity and Fear,pity and fear,-0.021069762424775162,-0.04597443372398986,-0.9856
+84,256,Death Cab for Cutie,Narrow Stairs ,You Can Do Better Than Me,you can do better than me,0.08019633887735464,0.0009487472086105446,0.9076
+85,104,Death Cab for Cutie,Narrow Stairs ,I Will Possess Your Heart,i will possess your heart,0.24508841900347134,-0.0030451972731851576,0.9988
+86,75,Death Cab for Cutie,Narrow Stairs ,Grapevine Fires,grapevine fires,-0.0533080354729438,-0.05548285113999936,-0.1406
+87,122,Death Cab for Cutie,Narrow Stairs ,Long Division,long division,-0.03637296974249238,-0.06680740148542014,0.91
+88,26,Death Cab for Cutie,Narrow Stairs ,Bixby Canyon Bridge,bixby canyon bridge,-0.046141468776676846,0.024185261783113865,0.9496
+89,261,Death Cab for Cutie,Narrow Stairs ,Your New Twin Sized Bed,your new twin sized bed,-0.0499170155117822,-0.02905534670751747,-0.9541
+90,34,Death Cab for Cutie,Narrow Stairs ,Cath...,cath...,-0.0677022986926839,0.031424637125615634,0.857
+91,206,Death Cab for Cutie,Narrow Stairs ,The Ice Is Getting Thinner,the ice is getting thinner,-0.005505844171151043,-0.06290897470858609,-0.2425
+92,141,Death Cab for Cutie,Narrow Stairs ,No Sunlight,no sunlight,-0.05248129923138889,-0.0545824495423313,-0.9792
+93,194,Death Cab for Cutie,Narrow Stairs ,Talking Bird,talking bird,0.024784598642250487,0.10208306908196156,0.8732
+94,234,Death Cab for Cutie,Ocean Child: Songs of Yoko Ono,Waiting for the Sunrise,waiting for the sunrise,-0.03511191049798809,-0.038386484799677496,0.9822
+95,245,Death Cab for Cutie,Plans,What Sarah Said,what sarah said,0.07275053925773031,-0.0562450230746583,-0.976
+96,51,Death Cab for Cutie,Plans,Different Names for the Same Thing,different names for the same thing,-0.02722583563827659,-0.05475907563160075,-0.9125
+97,126,Death Cab for Cutie,Plans,Marching Bands of Manhattan,marching bands of manhattan,0.21424927724462975,-0.08627976155801964,0.9662
+98,259,Death Cab for Cutie,Plans,Your Heart Is an Empty Room,your heart is an empty room,0.015456386213650418,0.11267872091651181,0.9114
+99,44,Death Cab for Cutie,Plans,Crooked Teeth,crooked teeth,-0.03896288699904104,0.03967821507473833,-0.966
+100,198,Death Cab for Cutie,Plans,Talking Like Turnstiles,talking like turnstiles,0.08806302889575521,0.061668922645474515,0.9722
+101,32,Death Cab for Cutie,Plans,Brothers on a Hotel Bed,brothers on a hotel bed,-0.03730238019595712,-0.062353706557897556,0.9552
+102,191,Death Cab for Cutie,Plans,Summer Skin,summer skin,0.0052270010711834595,-0.046421278947432976,0.1027
+103,109,Death Cab for Cutie,Plans,Jealousy Rides with Me,jealousy rides with me,-0.06230433888070738,-0.0010990191826232227,-0.8133
+104,170,Death Cab for Cutie,Plans,Someday You Will Be Loved,someday you will be loved,0.00017744620490626632,-0.04805224926058601,0.9983
+105,173,Death Cab for Cutie,Plans,Soul Meets Body,soul meets body,-0.029517308866049696,0.031237937056206425,0.9643
+106,22,Death Cab for Cutie,Plans,Bad Reputation,bad reputation,0.017276449779532622,0.36478608027520865,0.7689
+107,180,Death Cab for Cutie,Plans,Start Again,start again,-0.038768156395037175,0.38890080162228013,0.1884
+108,178,Death Cab for Cutie,Plans,Stable Song,stable song,-0.09764821865908273,-0.11574278911548262,-0.6793
+109,157,Death Cab for Cutie,Prove My Hypotheses / Wait,Prove My Hypotheses,prove my hypotheses,-0.12188020253987235,-0.07071434012094599,-0.6808
+110,351,Benjamin Gibbard,Proxima B / Filler,Proxima B,proxima b,-0.023464508784328122,-0.03278322473556506,-0.5106
+111,327,Benjamin Gibbard,Proxima B / Filler,Filler,filler,-0.03338525097231033,-0.039984001524417175,-0.9313
+112,110,Death Cab for Cutie,Score! 20 Years of Merge Records: The Covers!,Kicked In,kicked in,-0.0397618866875627,-0.07748221720313891,0.9786
+113,328,Benjamin Gibbard,Shrinking: Season 1 (Apple TV+ Original Series Soundtrack),Frightening Fishes (Main Title Theme from ”Shrinking”),frightening fishes (main title theme from ”shrinking”),0.010019470802710487,0.03882310275308271,-0.9618
+114,183,Death Cab for Cutie,Something About Airplanes,State Street Residential,state street residential,-0.08646282765913477,-0.06258585195919561,0.5868
+115,61,Death Cab for Cutie,Something About Airplanes,Fake Frowns,fake frowns,-0.07033911071126678,-0.04142144727876543,-0.9793
+116,24,Death Cab for Cutie,Something About Airplanes,Bend to Squares,bend to squares,-0.0652066134355272,-0.05181545958601657,-0.9377
+117,202,Death Cab for Cutie,Something About Airplanes,The Face That Launched 1000 Shits,the face that launched 1000 shits,-0.015524173096811564,-0.05457685379498709,-0.9674
+118,258,Death Cab for Cutie,Something About Airplanes,Your Bruise,your bruise,-0.03330208062352632,-0.052201036024572545,0.6587
+119,166,Death Cab for Cutie,Something About Airplanes,Sleep Spent,sleep spent,-0.07659387246511984,-0.01854005514343115,-0.0425
+120,131,Death Cab for Cutie,Spotify Singles,My Backwards Walk,my backwards walk,0.0245216078600695,0.01122407337893481,0.9912
+121,55,Death Cab for Cutie,Stubbs the Zombie: The Soundtrack,Earth Angel,earth angel,0.24611507987627804,-0.07713168427369303,0.9944
+122,123,Death Cab for Cutie,Sweetheart: Our Favorite Artists Sing Their Favorite Love Songs (2009),Love Song,love song,0.4575395326044105,-0.1061940443137809,0.9939
+123,257,Death Cab for Cutie,Thank You for Today,You Moved Away,you moved away,-0.07523555728912229,-0.07525861162952646,-0.5574
+124,21,Death Cab for Cutie,Thank You for Today,Autumn Love,autumn love,-0.03497295245049242,-0.144425365088364,0.9305
+125,192,Death Cab for Cutie,Thank You for Today,Summer Years,summer years,-0.023578491653931197,-0.03910056865858521,0.8689
+126,5,Death Cab for Cutie,Thank You for Today,60 & Punk,60 & punk,-0.05200003674468569,-0.055563242620680166,0.9949
+127,73,Death Cab for Cutie,Thank You for Today,Gold Rush,gold rush,-0.0657343121955665,-0.038144837552868974,0.9734
+128,133,Death Cab for Cutie,Thank You for Today,Near/Far,near/far,-0.03253859297263169,-0.06546221437720817,-0.5008
+129,137,Death Cab for Cutie,Thank You for Today,Northern Lights,northern lights,-0.05738490731978116,-0.0411087751945691,0.1779
+130,88,Death Cab for Cutie,Thank You for Today,I Dreamt We Spoke Again,i dreamt we spoke again,-0.05293204563233359,-0.06760223360455929,0.3506
+131,260,Death Cab for Cutie,Thank You for Today,Your Hurricane,your hurricane,-0.00985108664145209,-0.06711338022600659,-0.8065
+132,248,Death Cab for Cutie,Thank You for Today,When We Drive,when we drive,-0.05482653190306089,0.12051410152967158,0.9705
+133,125,Death Cab for Cutie,The Blue EP,Man in Blue,man in blue,0.12407758063849221,0.2586558846296345,0.9179
+134,111,Death Cab for Cutie,The Blue EP,Kids in ’99,kids in ’99,-0.05271429293113724,-0.0846865362322943,-0.1027
+135,223,Death Cab for Cutie,The Blue EP,To the Ground,to the ground,-0.0724686575872574,-0.053692532730618636,-0.0516
+136,23,Death Cab for Cutie,The Blue EP,Before the Bombs,before the bombs,0.4786258771333769,-0.0940745801673368,-0.9946
+137,31,Death Cab for Cutie,The Blue EP,Blue Bloods,blue bloods,-0.0493114396138006,-0.05623673405098223,0.9771
+138,128,Death Cab for Cutie,The Georgia EP,Metal Heart,metal heart,-0.007073535566968818,0.0021056438624748102,-0.9738
+139,112,Death Cab for Cutie,The Georgia EP,"King of Carrot Flowers, Pt. 1","king of carrot flowers, pt. 1",0.0341261742986297,-0.06807182410528999,-0.2732
+140,235,Death Cab for Cutie,The Georgia EP,Waterfalls,waterfalls,-0.017153785381690212,0.2000472736824149,0.9852
+141,62,Death Cab for Cutie,The Georgia EP,Fall On Me,fall on me,0.012075099730417111,0.002579497408198308,0.6072
+142,63,Death Cab for Cutie,The Georgia EP,Flirted With You All My Life,flirted with you all my life,-0.07921416807723937,-0.09263950529033027,-0.996
+143,54,Death Cab for Cutie,The Late Great Daniel Johnston: Discovered Covered,Dream Scream,dream scream,0.1355437735891463,0.05687147452822326,0.9535
+144,102,Death Cab for Cutie,The Open Door EP,I Was Once a Loyal Lover,i was once a loyal lover,-0.026822274092031875,0.0821561526522037,0.941
+145,119,Death Cab for Cutie,The Open Door EP,Little Bribes,little bribes,-0.08030304566689936,-0.04061777530829112,0.6486
+146,132,Death Cab for Cutie,The Open Door EP,My Mirror Speaks,my mirror speaks,0.010326927514741683,-0.06369323565882508,-0.9119
+147,6,Death Cab for Cutie,The Open Door EP,A Diamond and a Tether,a diamond and a tether,0.08984571556251647,0.12321823918683257,0.8318
+148,237,Death Cab for Cutie,The Photo Album (Deluxe Edition),We Laugh Indoors,we laugh indoors,-0.06399912094387743,-0.02735622005902369,-0.998
+149,177,Death Cab for Cutie,The Photo Album (Deluxe Edition),Stability,stability,-0.10051099766329771,-0.11937861782018769,0.574
+150,0,Death Cab for Cutie,The Photo Album (Deluxe Edition),20th Century Towers,20th century towers,-0.0557945173276561,0.001467736133853611,-0.8658
+151,189,Death Cab for Cutie,The Photo Album (Deluxe Edition),Styrofoam Plates,styrofoam plates,-0.03422323483382819,-0.04993946401850333,-0.971
+152,98,Death Cab for Cutie,The Photo Album (Deluxe Edition),I Was a Kaleidoscope,i was a kaleidoscope,-0.06294358730709733,-0.002255793172236298,0.1779
+153,11,Death Cab for Cutie,The Photo Album (Deluxe Edition),A Movie Script Ending,a movie script ending,-0.06328185357770374,-0.05018664351144377,0.9455
+154,10,Death Cab for Cutie,The Photo Album (Deluxe Edition),All Is Full of Love,all is full of love,0.715707317214759,-0.12452218868154476,0.9942
+155,79,Death Cab for Cutie,The Photo Album (Deluxe Edition),Gridlock Caravans,gridlock caravans,-0.06051509864853952,-0.07500667720758214,0.6495
+156,48,Death Cab for Cutie,The Photo Album (Deluxe Edition),Debate Exposes Doubt,debate exposes doubt,0.002528136634292163,-0.06285125306394047,-0.0258
+157,94,Death Cab for Cutie,The Photo Album (Deluxe Edition),Information Travels Faster,information travels faster,-0.059776832155822066,-0.060749499122080525,-0.9292
+158,27,Death Cab for Cutie,The Photo Album (Deluxe Edition),Blacking Out the Friction,blacking out the friction,-0.06284170485471277,0.09633414584318656,-0.0772
+159,186,Death Cab for Cutie,The Photo Album (Deluxe Edition),Steadier Footing,steadier footing,-0.03294077902912493,0.06281274180815741,0.4497
+160,42,Death Cab for Cutie,The Photo Album (Deluxe Edition),Coney Island,coney island,-0.06196921147190792,-0.0478054797865846,-0.865
+161,127,Death Cab for Cutie,The Twilight Saga: New Moon (Original Motion Picture Soundtrack),Meet Me on the Equinox,meet me on the equinox,0.013509201242775269,-0.06193484444236562,0.9757
+162,338,Benjamin Gibbard,Tiny Changes: A Celebration of Frightened Rabbit’s ‘The Midnight Organ Fight’,Keep Yourself Warm,keep yourself warm,0.2992898730776067,0.03808196212421715,0.9969
+163,242,Death Cab for Cutie,Transatlanticism (2013 Reissue),We Looked Like Giants,we looked like giants,-0.03355400659186543,0.007231363695064995,-0.5587
+164,8,Death Cab for Cutie,Transatlanticism (2013 Reissue),A Lack of Color,a lack of color,-0.014370117131143553,-0.005520465078835779,-0.2394
+165,113,Death Cab for Cutie,Transatlanticism (2013 Reissue),Lightness,lightness,-0.03765120733532112,0.06537937297724074,0.0325
+166,217,Death Cab for Cutie,Transatlanticism (2013 Reissue),Title and Registration,title and registration,0.05295885869265604,-0.09525846693916476,-0.9666
+167,142,Death Cab for Cutie,Transatlanticism (2013 Reissue),Passenger Seat,passenger seat,-0.042355870467430105,-0.04097834703046906,0.3018
+168,224,Death Cab for Cutie,Transatlanticism (2013 Reissue),Transatlanticism,transatlanticism,-0.0444317912161128,-0.004020560222454336,0.4172
+169,46,Death Cab for Cutie,Transatlanticism (2013 Reissue),Death of an Interior Decorator,death of an interior decorator,0.12520345794860027,-0.03846341538978934,0.8416
+170,211,Death Cab for Cutie,Transatlanticism (2013 Reissue),The Sound of Settling,the sound of settling,-0.048121565151915395,-0.04450537447162154,0.8834
+171,59,Death Cab for Cutie,Transatlanticism (2013 Reissue),Expo ’86,expo ’86,-0.07698567415790619,0.01065111530959869,-0.3716
+172,207,Death Cab for Cutie,Transatlanticism (2013 Reissue),The New Year,the new year,-0.03896195892110906,-0.039948314965184556,0.5859
+173,215,Death Cab for Cutie,Transatlanticism (2013 Reissue),Tiny Vessels,tiny vessels,0.014647615520341781,0.11557446959108916,0.9941
+174,230,Death Cab for Cutie,Underwater! / The Army Corps of Architects,Underwater!,underwater!,-0.049162094450589125,-0.05520785443476047,-0.5346
+175,308,Benjamin Gibbard,Universal Love - Wedding Songs Reimagined,And I Love Him,and i love him,0.6419498469669098,-0.04557505886502757,0.997
+176,120,Death Cab for Cutie,We Have the Facts and We’re Voting Yes,Little Fury Bugs,little fury bugs,-0.0005182886031684352,-0.05368365082822108,0.9184
+177,221,Death Cab for Cutie,We Have the Facts and We’re Voting Yes,Title Track,title track,-0.11100556690396225,-0.12034694538359396,0.9313
+178,135,Death Cab for Cutie,We Have the Facts and We’re Voting Yes,No Joy in Mudville,no joy in mudville,-0.06607074958690352,-0.05324254271535303,-0.2846
+179,67,Death Cab for Cutie,We Have the Facts and We’re Voting Yes,For What Reason,for what reason,-0.041461055471351795,-0.05097672541078221,0.8176
+180,124,Death Cab for Cutie,We Have the Facts and We’re Voting Yes,"Lowell, MA","lowell, ma",-0.05825209079746513,0.118111337613834,-0.2201
+181,146,Death Cab for Cutie,We Have the Facts and We’re Voting Yes,Photobooth,photobooth,-0.04001356284174672,-0.055670964598528085,0.9599
+182,165,Death Cab for Cutie,We Have the Facts and We’re Voting Yes,Scientist Studies,scientist studies,-0.059707698063629015,0.02038423290822831,0.4394
+183,40,Death Cab for Cutie,We Have the Facts and We’re Voting Yes,Company Calls Epilogue,company calls epilogue,-0.06070157115959802,-0.04244252032302727,-0.8321
+184,39,Death Cab for Cutie,We Have the Facts and We’re Voting Yes,Company Calls,company calls,-0.0672906343566699,-0.052378097991957195,-0.9972
+185,199,Death Cab for Cutie,We Have the Facts and We’re Voting Yes,Technicolor Girls,technicolor girls,-0.03942210039339997,0.031892684145451225,0.2617
+186,171,Death Cab for Cutie,We Have the Facts and We’re Voting Yes,Song for Kelly Huckaby,song for kelly huckaby,-0.08477219746915264,-0.07413037509764067,0.872
+187,2,Death Cab for Cutie,We Have the Facts and We’re Voting Yes,405,405,-0.06382222606649825,-0.06401487297393577,0.0243
+188,65,Death Cab for Cutie,"Yes, I’m a Witch Too",Forgive Me My Love,forgive me my love,0.3457450611734766,0.022902434012452667,0.9765
+189,134,Death Cab for Cutie,You Can Play These Songs with Chords,New Candles,new candles,-0.0304398357115732,0.10806106662778181,0.1456
+190,227,Death Cab for Cutie,You Can Play These Songs with Chords,Two Cars,two cars,-0.07790308857725341,-0.018736890138569006,0.7964
+191,150,Death Cab for Cutie,You Can Play These Songs with Chords,Pictures in an Exhibition,pictures in an exhibition,-0.03139110649790001,-0.014987486517090478,0.8961
+192,213,Death Cab for Cutie,You Can Play These Songs with Chords,This Charming Man,this charming man,-0.04363679187134868,0.0193914202015174,0.9923
+193,155,Death Cab for Cutie,You Can Play These Songs with Chords,President of What?,president of what?,-0.04976570876153182,0.007832748111095893,0.9595
+194,222,Death Cab for Cutie,You Can Play These Songs with Chords,Tomorrow,tomorrow,-0.07238865888202078,-0.032361108977572536,-0.8654
+195,35,Death Cab for Cutie,You Can Play These Songs with Chords,Champagne from a Paper Cup,champagne from a paper cup,-0.05389217064970847,-0.029185938527229498,-0.7506
+196,226,Death Cab for Cutie,You Can Play These Songs with Chords,TV Trays,tv trays,-0.03334143141632912,-0.05396994439611248,-0.7928
+197,64,Death Cab for Cutie,You Can Play These Songs with Chords,Flustered/Hey Tomcat!,flustered/hey tomcat!,-0.036506279089084735,0.005151094010052094,0.6131
+198,18,Death Cab for Cutie,You Can Play These Songs with Chords,Army Corps of Architects,army corps of architects,-0.08658427771695323,-0.0742535736031521,0.1901
+199,14,Death Cab for Cutie,You Can Play These Songs with Chords,Amputations,amputations,-0.028119082840767667,0.072510445070786,0.128
+200,200,Death Cab for Cutie,You Can Play These Songs with Chords,That’s Incentive,that’s incentive,0.08194995297844127,-0.07696602770337607,-0.7658
+201,233,Death Cab for Cutie,You Can Play These Songs with Chords,Wait,wait,-0.058915317409584,0.15288365074957902,0.0595
+202,118,Death Cab for Cutie,You Can Play These Songs with Chords,Line of Best Fit,line of best fit,-0.07935218988004245,0.03213530623235635,0.9916
+203,182,Death Cab for Cutie,You Can Play These Songs with Chords,State Street Residental,state street residental,-0.08667986858865934,-0.06379071629916985,0.6401
+204,158,Death Cab for Cutie,You Can Play These Songs with Chords,Prove My Hypothesis,prove my hypothesis,-0.12188020253987235,-0.07071434012094599,-0.7579
+205,17,Death Cab for Cutie,iTunes Originals – Death Cab for Cutie,An Early Heartbreak Song,an early heartbreak song,0.052737411326038874,0.11298186898738487,0.9908
+206,103,Death Cab for Cutie,iTunes Originals – Death Cab for Cutie,I Will Follow You into the Dark,i will follow you into the dark,0.06149243037987461,-0.05222567077854819,-0.9094
+207,201,Death Cab for Cutie,iTunes Originals – Death Cab for Cutie,The Employment Pages,the employment pages,-0.07055377080958329,-0.05731160828643418,-0.356
+208,82,Death Cab for Cutie,iTunes Originals – Death Cab for Cutie,Hindsight,hindsight,-0.06364776393325158,-0.06169673140226946,-0.9169
+209,66,Death Cab for Cutie,,Fortunate Son (feat. Sean Nelson),fortunate son (feat. sean nelson),-0.04557193013784769,-0.04791613536789355,-0.9827
+210,129,Death Cab for Cutie,,Million Dollar Loan,million dollar loan,-0.04668140930275768,-0.04759703518891489,0.6249
+211,162,Death Cab for Cutie,,Rockin’ Chair,rockin’ chair,-0.03712743164251619,0.04676297509041457,0.9931
+212,176,Death Cab for Cutie,,Spring Break Broke,spring break broke,-0.04904416585425441,-0.04442692374645325,-0.629
+213,236,Death Cab for Cutie,,We Have The Facts And We’re Voting Yes,we have the facts and we’re voting yes,-0.11523594853595563,-0.12389685458626415,0.9313
+214,252,Death Cab for Cutie,,World Shut Your Mouth,world shut your mouth,-0.031188689117361078,-0.07339222930782414,0.4939
+215,294,The Postal Service,,(This Is) The Dream of Evan and Chan,(this is) the dream of evan and chan,-0.06220758423565289,-0.03048895080485065,-0.0917
+216,307,Benjamin Gibbard,,A Lovely Affair,a lovely affair,-0.06963105235659503,0.06774165035378432,0.9773
+217,331,Benjamin Gibbard,,Ichiro’s Theme,ichiro’s theme,-0.025594092914528424,0.09904562934760174,0.9459
+218,334,Benjamin Gibbard,,Indian Summer,indian summer,-0.0631750499873859,-0.06150832827292792,0.8055
+219,337,Benjamin Gibbard,,Joga,joga,-0.055400034602677464,0.020669814810971514,0.1531
+220,340,Benjamin Gibbard,,Life in Quarantine,life in quarantine,-0.06175604929879509,-0.017012148536692834,-0.9401
+221,358,Benjamin Gibbard,,St. Swithin’s Day,st. swithin’s day,0.13971299399608067,-0.04922722279813223,0.9832
+222,361,Benjamin Gibbard,,The Saddest Story Ever Told,the saddest story ever told,0.033613480022940505,-0.07339886751618141,-0.8625
+223,366,Benjamin Gibbard,,When the Sun Goes Down,when the sun goes down,-0.06055512890911484,-0.009654039881495786,0.8011
+224,367,Benjamin Gibbard,,Where Our Destination Lies,where our destination lies,-0.013545051617833963,0.309006255878484,0.9602
