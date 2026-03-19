@@ -1,9 +1,9 @@
 # Soul Meets Body (meets NLP)
 
 ```
-Out in this Binary Sea
+"Out in this Binary Sea 
 Zeros and ones patterns appear
-They'll prove to all that we were here
+- Death Cab for Cutie, *Binary Sea* 
 ```
 
 ## Motivation 
