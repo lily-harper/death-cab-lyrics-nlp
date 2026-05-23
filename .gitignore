@@ -1,5 +1,8 @@
 .env
 
+/notebook.ipynb
+sentiment_over_years_plotly.ipynb 
+
 /data/raw*
 /data/clean
 
@@ -8,6 +11,7 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+.DS_Store
 # C extensions
 *.so
 

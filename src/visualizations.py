@@ -7,7 +7,7 @@ favs = [
     "Kintsugi",
     "Narrow Stairs",
     "Plans",
-    "Transatlanticism (2013 Reissue)",
+    "Transatlanticism",
     "Something About Airplanes",
     "Thank You for Today",
 ]
@@ -30,18 +30,21 @@ def song_components(df):
                     s = 50)
 
     favs = ["Stable Song", 
-            "Transatlanticism", 
-            "Lily", # biased toward this one :) 
-            "Such Great Heights",
-            "The Ghosts of Beverly Drive"]
+            "Lightness", 
+            "The Ghosts of Beverly Drive",
+            "Proxima B"]
 
     for i, row in df.iterrows():
         if row["song_name"] in favs:
             plt.annotate(
                 row["song_name"],
                 (row["x"], row["y"]),
-                fontsize = 10
+                fontsize = 8,
+                color = "black",
+                bbox=dict(facecolor="white", alpha=0.7)
             )
+    plt.suptitle("2D Projection of Song Lyric Similarity")
+    plt.title("Songs Vectorized with TF-IDF in PCA Space")
 
     plt.legend()
     plt.show()
