@@ -1,6 +1,7 @@
 .env
-
+notes.md
 /notebook.ipynb
+/analysis.ipynb
 sentiment_over_years_plotly.ipynb 
 
 /data/raw*

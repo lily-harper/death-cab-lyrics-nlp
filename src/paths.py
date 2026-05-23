@@ -43,11 +43,16 @@ PROJECT_ROOT = find_project_root(Path(__file__).resolve())
 DATA_DIR = PROJECT_ROOT / "data"
 RAW_DATA_DIR = DATA_DIR / "raw"
 CLEAN_DIR = DATA_DIR / "clean"
+PROCESSED_DIR = DATA_DIR / "processed"
 
 REPORTS_DIR = PROJECT_ROOT / "reports"
 FIGURES_DIR = REPORTS_DIR / "figures"
 
+WORD_COUNT_FIGURES_DIR = FIGURES_DIR / "word_counts"
+
 RAW_DATA_PATH = RAW_DATA_DIR / "raw_scrape.csv"
 CLEAN_DATA_PATH = CLEAN_DIR / "clean_lyrics.parquet" 
-TRANSFORMED_DATA_PATH = CLEAN_DIR / "transformed_lyrics.parquet"
+
+CLUSTER_DATA_PATH = PROCESSED_DIR / "lyrics_clustering.parquet"
+PLOTTING_DATA_PATH = PROCESSED_DIR / "lyrics_plotting.parquet"
 

@@ -2,6 +2,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.decomposition import TruncatedSVD
 
+from nltk.sentiment.vader import SentimentIntensityAnalyzer 
+
 import pandas as pd 
 
 
@@ -11,17 +13,30 @@ def decomp(
     text_col="lyrics_clean",
     n_components=2,
     random_state=67,
+    component_prefix="svd",
 ):
-    """Add sparse-friendly 2D TF-IDF components to a dataframe."""
+    """Add sparse-friendly TF-IDF SVD components to a dataframe."""
     X = vec.transform(df[text_col].fillna(""))
 
     svd = TruncatedSVD(n_components=n_components, random_state=random_state)
-    X_2d = svd.fit_transform(X)
+    X_decomp = svd.fit_transform(X)
 
     df_out = df.copy()
 
-    df_out["x"] = X_2d[:, 0]
-    df_out["y"] = X_2d[:, 1]
+    component_cols = [
+        f"{component_prefix}_{i + 1}" for i in range(X_decomp.shape[1])
+    ]
+    components = pd.DataFrame(
+        X_decomp,
+        columns=component_cols,
+        index=df_out.index,
+    )
+
+    df_out = pd.concat([df_out, components], axis=1)
+
+    if n_components >= 2:
+        df_out["x"] = df_out[f"{component_prefix}_1"]
+        df_out["y"] = df_out[f"{component_prefix}_2"]
 
     return df_out
 
@@ -50,6 +65,18 @@ def vectorize(
         return tfidf, vectorizer
 
     return X, vectorizer
+
+
+def vader(df, text_col="lyrics_clean"): 
+    """Add VADER compound sentiment scores for a text column."""
+    df = df.copy()
+    analyzer = SentimentIntensityAnalyzer()
+
+    df["sentiment"] = df[text_col].fillna("").apply(
+        lambda x: analyzer.polarity_scores(x)["compound"]
+    )
+
+    return df 
 
 
 def split(

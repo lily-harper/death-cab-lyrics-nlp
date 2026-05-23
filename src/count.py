@@ -8,7 +8,8 @@ CUSTOM_STOPWORDS = {
     "bah",  # sorry to the sound of settling
     "whoa",
     "woah",
-    "oohwhaho"
+    "oohwhaho", "ohhohh",
+    "ba", "oh"
 }
 
 

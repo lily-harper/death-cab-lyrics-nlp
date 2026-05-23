@@ -1,16 +1,7 @@
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt 
 
-favs = [
-    "Asphalt Meadows",
-    "Codes and Keys",
-    "Kintsugi",
-    "Narrow Stairs",
-    "Plans",
-    "Transatlanticism",
-    "Something About Airplanes",
-    "Thank You for Today",
-]
+
 
 cols = [
     "steelblue", "grey", "darkgrey", "gold", 
@@ -34,7 +25,7 @@ def song_components(df):
             "The Ghosts of Beverly Drive",
             "Proxima B"]
 
-    for i, row in df.iterrows():
+    for row in df.iterrows():
         if row["song_name"] in favs:
             plt.annotate(
                 row["song_name"],
@@ -168,5 +159,3 @@ def vader_chart(df):
     plt.title("Average Sentiment by Album")
 
     plt.show()
-
-
