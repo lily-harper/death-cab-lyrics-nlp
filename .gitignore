@@ -4,8 +4,13 @@ notes.md
 /analysis.ipynb
 sentiment_over_years_plotly.ipynb 
 
-/data/raw*
+/data/raw/*
 /data/clean
+
+/data/processed/
+
+lyrics_clustering.parquet
+lyrics_plotting.parquet
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

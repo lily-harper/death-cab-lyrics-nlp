@@ -150,7 +150,7 @@ def remove_covers(df):
         "St. Swithin's Day",
         "Start Again",
         "Suddenly Everything Has Changed",
-        "Sweet and Tender Hooligan (The Smiths cover)"
+        "Sweet and Tender Hooligan (The Smiths cover)",
         "The Concept",
         "This Charming Man",
         "Waterfalls",

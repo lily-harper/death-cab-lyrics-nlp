@@ -21,10 +21,7 @@ def summary(df: pd.DataFrame, raw = False):
         print("Each band has, after cleaning, this many observations \n")
         print(df["band_name"].value_counts())
 
-def main():
-    df = pd.read_csv(RAW_DATA_PATH)
-    summary(df, raw = True)
-
+def clean_lyrics(df: pd.DataFrame) -> pd.DataFrame:
     print("Removing rows with no lyrics...")
     df = remove_missing_lyrics(df)
 
@@ -53,6 +50,14 @@ def main():
                                            "lyrics_clean", "lyrics",
                                            "genius_url"],
                               category_cols=["band_name", "album"])
+
+    return df
+
+def main():
+    df = pd.read_csv(RAW_DATA_PATH)
+    summary(df, raw = True)
+
+    df = clean_lyrics(df)
 
     save_data(df, CLEAN_DATA_PATH, output = "parquet")
     summary(df)

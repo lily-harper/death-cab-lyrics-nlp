@@ -6,30 +6,20 @@ Out in this vast Binary Sea"
 - Death Cab for Cutie, Binary Sea
 ```
 
-## Motivation
-
-1. Spotify told me I had listened to **12 hours of Death Cab for Cutie** in one week
-2. I wanted to learn some NLP
+**A project by Lily Holmes. Summer 2026**
 
 ## Project Overview
 
 > This project uses basic NLP to analyze lyrics and themes in songs from Death Cab for Cutie, The Postal Service, and Benjamin Gibbard's solo work.
 
-Lyrics were collected with the Genius API, cleaned in Python, and analyzed with TF-IDF, PCA, logistic regression, word counts, and VADER sentiment analysis.
+Lyrics were collected with the Genius API, cleaned in Python, and analyzed with TF-IDF, truncated SVD components, word counts, and VADER sentiment analysis.
 
-The public dataset in this repository does not include full lyrics. It includes derived values only, such as PCA components and sentiment scores, to avoid redistributing copyrighted lyrics.
-
-## Questions
-
-* How differently did Ben Gibbard write for Death Cab and The Postal Service?
-* How does Death Cab for Cutie's tone differ between albums?
-* Can we take a song and predict if it was written for Death Cab, The Postal Service, or Benjamin Gibbard's solo work?
+The public dataset in this repository should not include full lyrics. Derived outputs, such as SVD components and sentiment scores, are safer to share than raw or cleaned lyric text.
 
 ## Methods
 
 * TF-IDF vectorization
-* PCA for dimensionality reduction and lyric similarity
-* Logistic regression for artist classification
+* Truncated SVD for dimensionality reduction and lyric similarity
 * VADER lexicon-based sentiment analysis
 * Word frequency using basic whitespace tokenization
 
@@ -41,9 +31,9 @@ Work within The Postal Service's album, *Give Up*, is especially lyrically cohes
 
 Lyrics across DCFC's discography are predictably more spread out than the other projects with regard to sentiment.
 
-![PCA on TF-IDF](docs/output.png)
+The pipeline produces SVD component datasets for clustering and plotting, plus word-count figures by selected albums.
 
-> PCA was applied to a TF-IDF matrix to represent songs in a two-dimensional space. Points near each other share similar vocabulary patterns.
+> Truncated SVD is applied to a TF-IDF matrix to represent songs in lower-dimensional space. Points near each other share similar vocabulary patterns.
 
 ## Pipeline
 
@@ -52,13 +42,13 @@ Genius API
    |
 Raw Lyrics CSV
    |
-Cleaning Notebook
+Cleaning Script
    |
-Processed Dataset
+Clean Lyrics Parquet
    |
-NLP Analysis
+VADER + TF-IDF + SVD
    |
-Visualizations
+Processed Parquet Files + Figures
 ```
 
 ## Repository Structure
@@ -66,27 +56,40 @@ Visualizations
 ```
 death-cab-lyrics-nlp/
 |-- data
-|   |-- n_lyrics.csv              # public derived dataset
-|   |-- raw/raw_lyrics.csv        # generated from Genius API, not intended for redistribution
-|   `-- clean/lyrics.csv          # cleaned lyrics, not intended for redistribution
+|   |-- raw/raw_scrape.csv                 # generated from Genius API
+|   |-- clean/clean_lyrics.parquet         # cleaned lyrics, not for public redistribution
+|   `-- processed
+|       |-- lyrics_clustering.parquet      # VADER + SVD components for clustering
+|       `-- lyrics_plotting.parquet        # VADER + 2D SVD components for plotting
 |-- docs
-|   |-- output.png
-|   |-- transatlanticism.png
-|   `-- genAI_log_*.pdf
+|   `-- data_processing_notes.md
+|-- reports
+|   `-- figures
+|       `-- word_counts
 |-- src
 |   |-- analysis.py
+|   |-- albums.py
+|   |-- components.py
 |   |-- count.py
 |   |-- lyric_preprocessing.py
-|   |-- pull.py
-|   |-- sentiment.py
+|   |-- paths.py
 |   `-- visualizations.py
-|-- cleaning.ipynb
-|-- analysis.ipynb
+|-- scripts
+|   |-- pull.py
+|   |-- clean.py
+|   |-- nat_lang.py
+|   |-- gen_plots.py
+|   `-- pipeline.py
 |-- requirements.txt
 `-- README.md
 ```
 
-## Reproducing This Project
+## Curiosity driven
+
+1. Spotify told me I had listened to **12 hours of Death Cab for Cutie** in one week
+2. I wanted to learn some NLP
+
+## Reproducing This Project 
 
 Clone this repository:
 
@@ -112,16 +115,41 @@ GENIUS_ACCESS_TOKEN=your_token_here
 Then run:
 
 ```bash
-python3 src/pull.py
+PYTHONPATH=. python3 scripts/pull.py
 ```
 
-The current workflow is notebook-based:
+This creates the raw data file:
 
-1. Run `src/pull.py` to create `data/raw/raw_lyrics.csv`.
-2. Run `cleaning.ipynb` to create `data/clean/lyrics.csv`.
-3. Run `analysis.ipynb` to create analysis outputs and the public derived file, `data/n_lyrics.csv`.
+```text
+data/raw/raw_scrape.csv
+```
 
-The notebooks use NLTK resources for stopwords and VADER sentiment. If needed, download them in Python:
+After the raw scrape exists, run the local pipeline:
+
+```bash
+PYTHONPATH=. python3 scripts/pipeline.py
+```
+
+The pipeline:
+
+1. Reads `data/raw/raw_scrape.csv`.
+2. Cleans and normalizes the lyric metadata.
+3. Saves `data/clean/clean_lyrics.parquet`.
+4. Adds VADER sentiment scores.
+5. Builds a TF-IDF matrix.
+6. Saves SVD components for clustering to `data/processed/lyrics_clustering.parquet`.
+7. Saves 2D SVD components for plotting to `data/processed/lyrics_plotting.parquet`.
+8. Saves word-count bar charts to `reports/figures/word_counts/`.
+
+Useful options:
+
+```bash
+PYTHONPATH=. python3 scripts/pipeline.py --skip-plots
+PYTHONPATH=. python3 scripts/pipeline.py --cluster-components 50
+PYTHONPATH=. python3 scripts/pipeline.py --raw-data path/to/raw.csv
+```
+
+The pipeline uses NLTK resources for stopwords and VADER sentiment. If needed, download them in Python:
 
 ```python
 import nltk
@@ -129,7 +157,13 @@ nltk.download("stopwords")
 nltk.download("vader_lexicon")
 ```
 
-Because the Genius catalog can change and the train/test split is currently random, exact row counts and model scores may vary slightly across runs.
+Because the Genius catalog and metadata can change, exact row counts and release-year coverage may vary slightly across runs.
+
+To generate the optional SVD component diagnostic plot:
+
+```bash
+PYTHONPATH=. python3 src/components.py
+```
 
 ## Notes
 
@@ -142,13 +176,13 @@ Limitations:
 * Lyrics-only analysis, which ignores sound, instrumentation, production, and other musical context
 * Simple models, which are useful for learning but limited in how much context they can understand
 
-I include additional brief writing on these topics in `analysis.ipynb`.
-
 ### On not infringing copyrights
 
-To respect copyright laws and Death Cab, I avoided including full lyrics in the public version of this project. Included instead are derived values, such as sentiment score and PCA components.
+To respect copyright laws and Death Cab, I avoided including full lyrics in the public version of this project. Included instead are derived values, such as sentiment scores and SVD components.
 
-By running `pull.py` with your own Genius API token, you can rebuild the raw data locally and then run it through the `cleaning.ipynb` notebook.
+By running `scripts/pull.py` with your own Genius API token, you can rebuild the raw data locally and then run it through the script-based pipeline.
+
+For current cleaning decisions and data-sharing caveats, see `docs/data_processing_notes.md`.
 
 ### On learning and GenAI usage
 
@@ -157,10 +191,6 @@ Still learning. I used resources like YouTube to understand concepts and follow 
 I used ChatGPT primarily for code debugging, concept understanding, and learning best practices. All code, even code suggested by ChatGPT, was hand-typed because I wanted to understand every line. For GenAI logs, please see the `docs` folder.
 
 All writing is mine, for better or worse.
-
-![Most frequent words in Transatlanticism](docs/transatlanticism.png)
-
-Most frequent words in the Death Cab album, *Transatlanticism*.
 
 ## Conclusion
 
