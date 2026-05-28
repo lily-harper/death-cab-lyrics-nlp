@@ -1,20 +1,20 @@
-# Soul Meets Body Meets NLP
+Soul Meets Body Meets NLP
+
+**A project by Lily Holmes. Summer 2026**
 
 ```
 "Oh come my love and swim with me,
 Out in this vast Binary Sea"
-- Death Cab for Cutie, Binary Sea
+- Death Cab for Cutie
 ```
-
-**A project by Lily Holmes. Summer 2026**
 
 ## Project Overview
 
 > This project uses basic NLP to analyze lyrics and themes in songs from Death Cab for Cutie, The Postal Service, and Benjamin Gibbard's solo work.
 
-Lyrics were collected with the Genius API, cleaned in Python, and analyzed with TF-IDF, truncated SVD components, word counts, and VADER sentiment analysis.
+Lyrics were collected with the Genius API, cleaned in Python, and analyzed.
 
-The public dataset in this repository should not include full lyrics. Derived outputs, such as SVD components and sentiment scores, are safer to share than raw or cleaned lyric text.
+The public dataset in this repository does not include full lyrics. Derived outputs are sharedrather than raw or cleaned lyric text.
 
 ## Methods
 
@@ -27,9 +27,7 @@ The public dataset in this repository should not include full lyrics. Derived ou
 
 Many songs written by Benjamin Gibbard across the three projects I looked at are similar in sentiment and vocabulary.
 
-Work within The Postal Service's album, *Give Up*, is especially lyrically cohesive.
-
-Lyrics across DCFC's discography are predictably more spread out than the other projects with regard to sentiment.
+Work within The Postal Service's album, *Give Up*, is especially lyrically cohesive while lyrics across DCFC's discography are predictably more spread out than the other projects with regard to sentiment.
 
 The pipeline produces SVD component datasets for clustering and plotting, plus word-count figures by selected albums.
 
@@ -51,13 +49,16 @@ VADER + TF-IDF + SVD
 Processed Parquet Files + Figures
 ```
 
+> Pipeline portions in `scripts`, reusable logic in `src`
+
 ## Repository Structure
 
 ```
 death-cab-lyrics-nlp/
 |-- data
+|   |-- data_wo_lyrics.csv                 # procesed dataset with lyrics removed 
 |   |-- raw/raw_scrape.csv                 # generated from Genius API
-|   |-- clean/clean_lyrics.parquet         # cleaned lyrics, not for public redistribution
+|   |-- clean/clean_lyrics.parquet         # cleaned lyrics, not for public \
 |   `-- processed
 |       |-- lyrics_clustering.parquet      # VADER + SVD components for clustering
 |       `-- lyrics_plotting.parquet        # VADER + 2D SVD components for plotting
@@ -66,6 +67,9 @@ death-cab-lyrics-nlp/
 |-- reports
 |   `-- figures
 |       `-- word_counts
+|   `-- interactive                        # plotly outputs 
+|       `-- sentiment_per_year.html
+|       `-- songs_vader_level.html
 |-- src
 |   |-- analysis.py
 |   |-- albums.py
@@ -84,10 +88,15 @@ death-cab-lyrics-nlp/
 `-- README.md
 ```
 
-## Curiosity driven
+## Driven by...
+#### Curiosity 
 
-1. Spotify told me I had listened to **12 hours of Death Cab for Cutie** in one week
+1. I wanted to further understand the writing of Benjamin Gibbard 
 2. I wanted to learn some NLP
+
+#### and Purpose 
+
+Use cases for this analysis could be for fan engagement and/or music recommendation. 
 
 ## Reproducing This Project 
 
@@ -130,6 +139,9 @@ After the raw scrape exists, run the local pipeline:
 PYTHONPATH=. python3 scripts/pipeline.py
 ```
 
+> Note: I included the cleaned and processed dataset (without full lyrics) `data_wo_lyrics.csv`
+> This can be used for the clustering portion of the project and would allow you to skip to API pull, cleaning, and NLP decomposition portion of the pipeline. 
+
 The pipeline:
 
 1. Reads `data/raw/raw_scrape.csv`.
@@ -165,30 +177,42 @@ To generate the optional SVD component diagnostic plot:
 PYTHONPATH=. python3 src/components.py
 ```
 
-## Notes
+## Notes on...
 
-### On limitations, justifications, and improvements
+#### limitations
 
-Limitations:
-
-* Small dataset, about 200 songs after cleaning
-* Class imbalance, since most observations are Death Cab for Cutie songs
+* Small dataset, 200 songs after cleaning
+* Class imbalance since most observations are Death Cab for Cutie songs
 * Lyrics-only analysis, which ignores sound, instrumentation, production, and other musical context
-* Simple models, which are useful for learning but limited in how much context they can understand
+* Simple models which are useful for learning but limited in how much context they can understand
 
-### On not infringing copyrights
+Bias could also arise in the preprocessing and modeling stages, so I documented them in `data_processing_notes.md`   
+
+More limitations arise as a song could have been debuted decades later than it was written, or recorded in my dataset, which would impact the sentiment over time analysis.  
+
+#### iterations: 
+
+The first iteration was completed during Spring Break 2026. In this, I learned the NLP concepts used and applied them solely in notebooks with limited modularization. 
+
+The second (and current) iteration is being done in Summer Break 2026. I wanted to revist this to apply more of what I learned with unsupervised ML and pipeline logic. In this version I used Codex and moved all logic into source files that link to scripts. The main goal was to allow someone to run the whole pipeline with one CLI command rather than scroll through multiple notebooks.   
+
+I revist this project I would implement transformer based NLP. 
+
+
+#### not infringing copyrights
 
 To respect copyright laws and Death Cab, I avoided including full lyrics in the public version of this project. Included instead are derived values, such as sentiment scores and SVD components.
 
-By running `scripts/pull.py` with your own Genius API token, you can rebuild the raw data locally and then run it through the script-based pipeline.
+By running `scripts/pull.py` with your own Genius API token, you can rebuild the raw data locally and then run it through the script-based pipeline (see above).
 
-For current cleaning decisions and data-sharing caveats, see `docs/data_processing_notes.md`.
 
-### On learning and GenAI usage
+#### learning and GenAI/AgenticAI usage
 
-Still learning. I used resources like YouTube to understand concepts and follow tutorials. **If you have any feedback, please reach out! I would really value more insight.**
+Still learning. I used resources like YouTube to understand concepts and follow tutorials. This project's second iteration was completed before taking ML or NLP. **If you have any feedback, please reach out! I would really value more insight.**
 
-I used ChatGPT primarily for code debugging, concept understanding, and learning best practices. All code, even code suggested by ChatGPT, was hand-typed because I wanted to understand every line. For GenAI logs, please see the `docs` folder.
+I used ChatGPT mainly to understand how to move the project from notebooks to scripts.
+
+I worked in parallel with OpenAI's Codex. 
 
 All writing is mine, for better or worse.
 

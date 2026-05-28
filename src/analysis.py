@@ -34,7 +34,7 @@ def decomp(
 
     df_out = pd.concat([df_out, components], axis=1)
 
-    if n_components >= 2:
+    if n_components == 2:
         df_out["x"] = df_out[f"{component_prefix}_1"]
         df_out["y"] = df_out[f"{component_prefix}_2"]
 

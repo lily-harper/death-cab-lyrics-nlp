@@ -56,3 +56,4 @@ CLEAN_DATA_PATH = CLEAN_DIR / "clean_lyrics.parquet"
 CLUSTER_DATA_PATH = PROCESSED_DIR / "lyrics_clustering.parquet"
 PLOTTING_DATA_PATH = PROCESSED_DIR / "lyrics_plotting.parquet"
 
+PLOTLY_FIGURES_DIR = FIGURES_DIR / "interactive"

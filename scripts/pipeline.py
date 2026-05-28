@@ -3,14 +3,14 @@ import argparse
 import pandas as pd
 
 from scripts.clean import clean_lyrics, summary
-from scripts.gen_plots import save_word_count_figures
+from scripts.gen_plots import save_all_figures
 from scripts.nat_lang import make_nlp_datasets
 from src.paths import (
     CLEAN_DATA_PATH,
     CLUSTER_DATA_PATH,
     PLOTTING_DATA_PATH,
     RAW_DATA_PATH,
-    WORD_COUNT_FIGURES_DIR,
+    FIGURES_DIR,
     save_data,
 )
 
@@ -43,8 +43,8 @@ def run_pipeline(
     print(f"Data for rough visualizations saved to {plotting_data_path}")
 
     if make_plots:
-        plots_saved = save_word_count_figures(df_clean)
-        print(f"Saved {plots_saved} plots to {WORD_COUNT_FIGURES_DIR}")
+        plots_saved = save_all_figures(df_clean, df_vis)
+        print(f"Saved {plots_saved} plots to {FIGURES_DIR}")
 
 
 def parse_args():
@@ -69,7 +69,7 @@ def parse_args():
     parser.add_argument(
         "--skip-plots",
         action="store_true",
-        help="Skip word-count figure generation.",
+        help="Skip figure generation.",
     )
     return parser.parse_args()
 

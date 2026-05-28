@@ -1,60 +1,68 @@
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt 
 
+from src.albums import (
+    ALBUM_COLORS,
+    BAND_COL_MAP,
+    DC_COMPONENT_ALBUMS,
+    FAVORITE_SONGS,
+    SENTIMENT_ALBUMS,
+)
 
-
-cols = [
-    "steelblue", "grey", "darkgrey", "gold", 
-    "darkred", "royalblue", "tan"
-]
 
 # TF_IDF 
 
-def song_components(df):
-    artists = df["band_name"].unique()
+def song_components(
+    df,
+    ax=None,
+    x_col="x",
+    y_col="y",
+    artist_col="band_name",
+    song_col="song_name",
+    favorites=None,
+    colors=None,
+):
+    """Plot songs in two-dimensional lyric component space."""
+    if ax is None:
+        _, ax = plt.subplots(figsize=(7, 5))
+
+    favorites = favorites or FAVORITE_SONGS
+    colors = colors or BAND_COL_MAP
+
+    artists = df[artist_col].dropna().unique()
 
     for artist in artists:
-        subset = df[df["band_name"] == artist]
-        plt.scatter(subset["x"], subset["y"], 
-                    label=artist, alpha = 0.65,
-                    edgecolors= "white",
-                    s = 50)
+        subset = df[df[artist_col] == artist]
+        ax.scatter(
+            subset[x_col],
+            subset[y_col],
+            label=artist,
+            alpha=0.65,
+            edgecolors="white",
+            s=50,
+            color=colors.get(artist),
+        )
 
-    favs = ["Stable Song", 
-            "Lightness", 
-            "The Ghosts of Beverly Drive",
-            "Proxima B"]
-
-    for row in df.iterrows():
-        if row["song_name"] in favs:
-            plt.annotate(
-                row["song_name"],
-                (row["x"], row["y"]),
-                fontsize = 8,
-                color = "black",
-                bbox=dict(facecolor="white", alpha=0.7)
+    for _, row in df.iterrows():
+        if row[song_col] in favorites:
+            ax.annotate(
+                row[song_col],
+                (row[x_col], row[y_col]),
+                fontsize=8,
+                color="black",
+                bbox=dict(facecolor="white", alpha=0.7),
             )
-    plt.suptitle("2D Projection of Song Lyric Similarity")
-    plt.title("Songs Vectorized with TF-IDF in PCA Space")
+    ax.set_title("Songs Vectorized with TF-IDF in SVD Space")
+    ax.set_xlabel("SVD Component 1")
+    ax.set_ylabel("SVD Component 2")
+    ax.legend()
 
-    plt.legend()
-    plt.show()
+    return ax
 
 def song_components_dc_album(df):
-    
-    favs = [
-    "Asphalt Meadows",
-    "Codes and Keys",
-    "Kintsugi",
-    "Narrow Stairs",
-    "Plans",
-    "Transatlanticism (2013 Reissue)",
-    "Something About Airplanes",
-    "Thank You for Today",
-]
     dc = df[df["band_name"] == "Death Cab for Cutie"]
 
-    dc = dc[dc["album"].isin(favs)]
+    dc = dc[dc["album"].isin(DC_COMPONENT_ALBUMS)]
 
     albums = dc["album"].unique()
 
@@ -92,7 +100,7 @@ def ben_gibbard_boxplot(df):
 
 def vader_album(df):
     dc = df[df["band_name"] == "Death Cab for Cutie"]
-    dc = dc[df["album"].isin(favs)]
+    dc = dc[df["album"].isin(SENTIMENT_ALBUMS)]
 
     album_sentiment = (
         dc.groupby("album")["sentiment"]
@@ -100,7 +108,8 @@ def vader_album(df):
         .sort_values()
     )
 
-    album_sentiment.plot(kind="bar", color = cols)
+    colors = [ALBUM_COLORS.get(album, "slategray") for album in album_sentiment.index]
+    album_sentiment.plot(kind="bar", color=colors)
 
     plt.title("Sentiment across DCFC Albums")
     plt.xlabel("Album")
@@ -113,32 +122,14 @@ def vader_album(df):
     plt.show()
 
 def vader_chart(df):
-    
-    fav_albums = [
-        "Plans",
-        "Transatlanticism (2013 Reissue)",
-        "Narrow Stairs ",
-        "Kintsugi",
-        "Give Up (10th Anniversary Edition)",
-        "Former Lives",
-        "Something About Airplanes",
-        "The Photo Album (Deluxe Edition)",
-        "Codes and Keys"
-    ]
-
-    col_map = { 
-        "Death Cab for Cutie": "steelblue",
-        "Benjamin Gibbard": "navy",
-        "The Postal Service": "slategrey"}
-
-    subset = df[df["album"].isin(fav_albums)]
+    subset = df[df["album"].isin(SENTIMENT_ALBUMS)]
 
     sentiment_album = (
         subset.groupby(["band_name", "album"], as_index = False)["sentiment"]
         .mean()
     )
 
-    sentiment_album["color"] = sentiment_album["band_name"].map(col_map)
+    sentiment_album["color"] = sentiment_album["band_name"].map(BAND_COL_MAP)
 
     plot_df = sentiment_album.sort_values("sentiment")
     plt.bar(
@@ -148,9 +139,8 @@ def vader_chart(df):
     )
 
     legend_handles = [
-        mpatches.Patch(color="steelblue", label="Death Cab for Cutie"),
-        mpatches.Patch(color="navy", label="Benjamin Gibbard"),
-        mpatches.Patch(color="slategrey", label="The Postal Service")
+        mpatches.Patch(color=color, label=band)
+        for band, color in BAND_COL_MAP.items()
     ]
 
     plt.xticks(rotation=45, ha = "right")
