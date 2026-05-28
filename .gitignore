@@ -9,6 +9,8 @@ sentiment_over_years_plotly.ipynb
 
 /data/processed/
 
+.html
+
 lyrics_clustering.parquet
 lyrics_plotting.parquet
 
