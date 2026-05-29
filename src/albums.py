@@ -25,10 +25,11 @@ BAND_COL_MAP = {
 }
 
 FAVORITE_SONGS = [
-    "Stable Song",
-    "Lightness",
-    "The Ghosts of Beverly Drive",
+    "Brothers on a Hotel Bed",
+    "Tiny Vessels",
+    "Black Sun",
     "Proxima B",
+    "Nothing Better"
 ]
 
 DC_COMPONENT_ALBUMS = [

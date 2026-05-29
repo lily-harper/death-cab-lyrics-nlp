@@ -12,6 +12,7 @@ from src.paths import (
     RAW_DATA_PATH,
     FIGURES_DIR,
     save_data,
+    DATA_DIR
 )
 
 
@@ -20,7 +21,7 @@ def run_pipeline(
     clean_data_path=CLEAN_DATA_PATH,
     cluster_data_path=CLUSTER_DATA_PATH,
     plotting_data_path=PLOTTING_DATA_PATH,
-    cluster_components=75,
+    cluster_components=25,
     make_plots=True,
 ):
     print(f"Reading raw data from {raw_data_path}")
@@ -31,7 +32,7 @@ def run_pipeline(
     save_data(df_clean, clean_data_path, output="parquet")
     summary(df_clean)
 
-    df_cluster, df_vis = make_nlp_datasets(
+    df_cluster, df_vis, df_public = make_nlp_datasets(
         df_clean,
         cluster_components=cluster_components,
     )
@@ -41,6 +42,9 @@ def run_pipeline(
 
     save_data(df_vis, plotting_data_path, output="parquet")
     print(f"Data for rough visualizations saved to {plotting_data_path}")
+
+    save_data(df_public, DATA_DIR / "data_wo_lyrics.csv", output="csv")
+    print(f"Data for rough visualizations saved to {DATA_DIR}")
 
     if make_plots:
         plots_saved = save_all_figures(df_clean, df_vis)

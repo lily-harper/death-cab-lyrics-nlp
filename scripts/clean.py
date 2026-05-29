@@ -7,7 +7,8 @@ from src.lyric_preprocessing import (remove_missing_lyrics, remove_versions,
                                      shorten_album_names,
                                      fill_missing_albums,
                                      assign_album_majority_year,
-                                     convert_column_types)
+                                     convert_column_types,
+                                     add_lyrics_no_stopwords)
 
 from src.paths import RAW_DATA_PATH, CLEAN_DATA_PATH, save_data
 
@@ -22,6 +23,8 @@ def summary(df: pd.DataFrame, raw = False):
         print(df["band_name"].value_counts())
 
 def clean_lyrics(df: pd.DataFrame) -> pd.DataFrame:
+    print("Listening to Transcatlanticism. and crying...")
+
     print("Removing rows with no lyrics...")
     df = remove_missing_lyrics(df)
 
@@ -44,12 +47,19 @@ def clean_lyrics(df: pd.DataFrame) -> pd.DataFrame:
     print("Filling missing albums...")
     df = fill_missing_albums(df)
 
+    print("Removing stopwords...")
+    df = add_lyrics_no_stopwords(df, text_col="lyrics_clean", output_col="lyrics_no_stopwords")
+
+    df = df.drop(columns = "lyrics")
+
     df = convert_column_types(df, 
                               int_cols=["release_year"],
                               string_cols=["song_name_clean", "song_name",
-                                           "lyrics_clean", "lyrics",
+                                           "lyrics_clean", "lyrics_no_stopwords", 
                                            "genius_url"],
                               category_cols=["band_name", "album"])
+
+    print("crying to 'a lack of color' ")
 
     return df
 

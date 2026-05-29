@@ -1,4 +1,4 @@
-Soul Meets Body Meets NLP
+# Soul Meets Body Meets NLP
 
 **A project by Lily Holmes. Summer 2026**
 
@@ -196,7 +196,7 @@ The first iteration was completed during Spring Break 2026. In this, I learned t
 
 The second (and current) iteration is being done in Summer Break 2026. I wanted to revist this to apply more of what I learned with unsupervised ML and pipeline logic. In this version I used Codex and moved all logic into source files that link to scripts. The main goal was to allow someone to run the whole pipeline with one CLI command rather than scroll through multiple notebooks.   
 
-I revist this project I would implement transformer based NLP. 
+If I revist this project I would implement transformer based NLP. 
 
 
 #### not infringing copyrights

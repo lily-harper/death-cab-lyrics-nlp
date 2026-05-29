@@ -10,7 +10,7 @@ import pandas as pd
 def decomp(
     df,
     vec,
-    text_col="lyrics_clean",
+    text_col="lyrics_no_stopwords",
     n_components=2,
     random_state=67,
     component_prefix="svd",

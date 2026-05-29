@@ -161,3 +161,29 @@ def remove_covers(df):
     df = df[~song_titles.isin(covers)]
 
     return df 
+
+
+def add_lyrics_no_stopwords(
+    df,
+    text_col="lyrics_clean",
+    output_col="lyrics_no_stopwords",
+    extra_stopwords=None,
+) -> pd.DataFrame:
+    """Create a lyric column with NLTK and custom stopwords removed."""
+    from src.count import get_stopwords
+
+    df = df.copy()
+    stop_words = get_stopwords(extra_stopwords)
+
+    def remove_stopwords(text):
+        if pd.isna(text):
+            return ""
+
+        tokens = str(text).split()
+        tokens = [word for word in tokens if word not in stop_words]
+
+        return " ".join(tokens)
+
+    df[output_col] = df[text_col].apply(remove_stopwords)
+
+    return df

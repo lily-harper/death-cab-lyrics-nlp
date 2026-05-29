@@ -21,6 +21,7 @@ def song_components(
     song_col="song_name",
     favorites=None,
     colors=None,
+    label_offsets=None,
 ):
     """Plot songs in two-dimensional lyric component space."""
     if ax is None:
@@ -28,6 +29,13 @@ def song_components(
 
     favorites = favorites or FAVORITE_SONGS
     colors = colors or BAND_COL_MAP
+    label_offsets = label_offsets or {
+        "Brothers on a Hotel Bed": (0, -0.1),
+        "Tiny Vessels": (0.07, 0.1),
+        "Black Sun": (-0.025, 0.25),
+        "Proxima B": (0.0, 0.12),
+        "Nothing Better": (0.025, .01),
+    }
 
     artists = df[artist_col].dropna().unique()
 
@@ -43,15 +51,39 @@ def song_components(
             color=colors.get(artist),
         )
 
-    for _, row in df.iterrows():
-        if row[song_col] in favorites:
-            ax.annotate(
-                row[song_col],
-                (row[x_col], row[y_col]),
-                fontsize=8,
-                color="black",
-                bbox=dict(facecolor="white", alpha=0.7),
-            )
+    favorite_rows = df[df[song_col].isin(favorites)].reset_index(drop=True)
+
+    for i, row in favorite_rows.iterrows():
+        if isinstance(label_offsets, dict):
+            x_offset, y_offset = label_offsets.get(row[song_col], (0.05, 0.05))
+        else:
+            x_offset, y_offset = label_offsets[i % len(label_offsets)]
+
+        ax.annotate(
+            row[song_col],
+            xy=(row[x_col], row[y_col]),
+            xytext=(row[x_col] + x_offset, row[y_col] + y_offset),
+            textcoords="data",
+            ha="left" if x_offset > 0 else "center",
+            va="center",
+            fontsize=8,
+            color="black",
+            bbox=dict(
+                boxstyle="round,pad=0.25",
+                facecolor="white",
+                edgecolor="lightgray",
+                alpha=0.9,
+            ),
+            arrowprops=dict(
+                arrowstyle="->",
+                color="gray",
+                linewidth=0.8,
+                shrinkA=2,
+                shrinkB=4,
+                connectionstyle="arc3,rad=0.12",
+            ),
+            zorder=5,
+        )
     ax.set_title("Songs Vectorized with TF-IDF in SVD Space")
     ax.set_xlabel("SVD Component 1")
     ax.set_ylabel("SVD Component 2")

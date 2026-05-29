@@ -50,7 +50,7 @@ def top_words(
     df,
     album=None,
     n=20,
-    text_col="lyrics_clean",
+    text_col="lyrics_no_stopwords",
     album_col="album",
     remove_stopwords=True,
     extra_stopwords=None,
@@ -96,7 +96,7 @@ def plot_top_words(
     album=None,
     n=20,
     col="slategray",
-    text_col="lyrics_clean",
+    text_col="lyrics_no_stopwords",
     album_col="album",
     remove_stopwords=True,
     extra_stopwords=None,
@@ -121,7 +121,7 @@ def plot_top_words(
     ax.barh(counts["word"], counts["count"], color=col)
 
     if album is None:
-        ax.set_title("Most Frequent Words in Ben Gibbard's Lyrics")
+        ax.set_title("Most Frequent Words in Ben Gibbard's Lyrics, without stopwords")
     else:
         ax.set_title(f"Most Frequent Words in the Album: {album}")
 
